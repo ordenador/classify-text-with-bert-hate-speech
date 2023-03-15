@@ -10,8 +10,6 @@ pinned: false
 license: openrail
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
-
 # Hate Speech Classifier
 
 This project uses TensorFlow, and BERT to implement a hate speech and offensive language classifier. The model is trained on the Hate Speech and Offensive Language Dataset and can classify tweets into three classes:
