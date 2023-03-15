@@ -1,18 +1,3 @@
----
-title: Classify Text With Bert Hate Speech
-emoji: 🔥
-colorFrom: purple
-colorTo: red
-sdk: gradio
-sdk_version: 3.20.1
-app_file: app.py
-pinned: false
-license: openrail
----
-
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
-
-
 # Hate Speech Classifier
 
 This project uses TensorFlow, and BERT to implement a hate speech and offensive language classifier. The model is trained on the Hate Speech and Offensive Language Dataset and can classify tweets into three classes:
@@ -20,6 +5,14 @@ This project uses TensorFlow, and BERT to implement a hate speech and offensive 
 0. Hate speech
 1. Offensive language
 2. Neither
+
+## Try the Model Online
+
+You can try the model online using the following link:
+
+- [Hate Speech Classifier on Hugging Face Spaces](https://huggingface.co/spaces/Ordenador/classify-text-with-bert-hate-speech)
+
+Click the link above to access the interactive interface where you can input text and see the model's predictions for hate speech, offensive language, or neither.
 
 
 ## Prerequisites
@@ -62,4 +55,14 @@ This project is based on:
 - Hate Speech and Offensive Language Dataset. (2020, 17 junio). Kaggle. https://www.kaggle.com/mrmorj/hate-speech-and-offensive-language-dataset
 
 
-
+---
+title: Classify Text With Bert Hate Speech
+emoji: 🔥
+colorFrom: purple
+colorTo: red
+sdk: gradio
+sdk_version: 3.20.1
+app_file: app.py
+pinned: false
+license: openrail
+---
