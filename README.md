@@ -63,5 +63,5 @@ This project is based on:
 
 - Classify text with BERT. (s. f.). TensorFlow. https://www.tensorflow.org/text/tutorials/classify_text_with_bert
 - Devlin, J., Chang, M., Lee, K., & Toutanova, K. (2018). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. arXiv (Cornell University). https://arxiv.org/pdf/1810.04805v2
-- G. (2021, 3 febrero). Hate Speech - BERT+CNN and BERT+MLP in Tensorflow. Kaggle. https://www.kaggle.com/code/giovanimachado/hate-speech-bert-cnn-and-bert-mlp-in-tensorflow
-- Hate Speech and Offensive Language Dataset. (2020, 17 junio). Kaggle. https://www.kaggle.com/mrmorj/hate-speech-and-offensive-language-dataset
+- G. (2021, February 3). Hate Speech - BERT+CNN and BERT+MLP in Tensorflow. Kaggle. https://www.kaggle.com/code/giovanimachado/hate-speech-bert-cnn-and-bert-mlp-in-tensorflow
+- Hate Speech and Offensive Language Dataset. (2020, June 17). Kaggle. https://www.kaggle.com/mrmorj/hate-speech-and-offensive-language-dataset
