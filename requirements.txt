@@ -105,9 +105,9 @@ googleapis-common-protos==1.60.0
     # via
     #   google-api-core
     #   tensorflow-metadata
-gradio==3.47.1
+gradio==3.50.2
     # via -r requirements.in
-gradio-client==0.6.0
+gradio-client==0.6.1
     # via gradio
 grpcio==1.59.0
     # via
