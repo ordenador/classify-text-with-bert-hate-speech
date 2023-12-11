@@ -48,9 +48,12 @@ charset-normalizer==3.3.0
 click==8.1.7
     # via
     #   tensorflow-datasets
+    #   typer
     #   uvicorn
 colorama==0.4.6
-    # via sacrebleu
+    # via
+    #   sacrebleu
+    #   typer
 contourpy==1.1.1
     # via matplotlib
 cycler==0.12.1
@@ -64,6 +67,7 @@ dm-tree==0.1.8
 etils[array-types,enp,epath,epy,etqdm,etree]==1.5.0
     # via
     #   array-record
+    #   etils
     #   tensorflow-datasets
 fastapi==0.103.2
     # via gradio
@@ -105,9 +109,9 @@ googleapis-common-protos==1.60.0
     # via
     #   google-api-core
     #   tensorflow-metadata
-gradio==3.47.1
+gradio==4.8.0
     # via -r requirements.in
-gradio-client==0.6.0
+gradio-client==0.7.1
     # via gradio
 grpcio==1.59.0
     # via
@@ -167,6 +171,8 @@ lxml==4.9.3
     # via sacrebleu
 markdown==3.5
     # via tensorboard
+markdown-it-py==3.0.0
+    # via rich
 markupsafe==2.1.3
     # via
     #   gradio
@@ -177,6 +183,8 @@ matplotlib==3.8.0
     #   gradio
     #   pycocotools
     #   tf-models-official
+mdurl==0.1.2
+    # via markdown-it-py
 ml-dtypes==0.2.0
     # via tensorflow
 numpy==1.26.0
@@ -268,6 +276,8 @@ pydantic-core==2.10.1
     # via pydantic
 pydub==0.25.1
     # via gradio
+pygments==2.17.2
+    # via rich
 pyparsing==3.1.1
     # via
     #   httplib2
@@ -306,6 +316,8 @@ requests==2.31.0
     #   tensorflow-datasets
 requests-oauthlib==1.3.1
     # via google-auth-oauthlib
+rich==13.7.0
+    # via typer
 rpds-py==0.10.4
     # via
     #   jsonschema
@@ -328,6 +340,8 @@ sentencepiece==0.1.99
     # via tf-models-official
 seqeval==1.2.2
     # via tf-models-official
+shellingham==1.5.4
+    # via typer
 six==1.16.0
     # via
     #   astunparse
@@ -390,6 +404,8 @@ threadpoolctl==3.2.0
     # via scikit-learn
 toml==0.10.2
     # via tensorflow-datasets
+tomlkit==0.12.0
+    # via gradio
 toolz==0.12.0
     # via altair
 tqdm==4.66.1
@@ -398,6 +414,10 @@ tqdm==4.66.1
     #   huggingface-hub
     #   kaggle
     #   tensorflow-datasets
+typer[all]==0.9.0
+    # via
+    #   gradio
+    #   typer
 typing-extensions==4.8.0
     # via
     #   etils
@@ -408,6 +428,7 @@ typing-extensions==4.8.0
     #   pydantic
     #   pydantic-core
     #   tensorflow
+    #   typer
 tzdata==2023.3
     # via pandas
 uritemplate==4.1.1
@@ -421,9 +442,7 @@ uvicorn==0.23.2
 webencodings==0.5.1
     # via bleach
 websockets==11.0.3
-    # via
-    #   gradio
-    #   gradio-client
+    # via gradio-client
 werkzeug==3.0.0
     # via tensorboard
 wheel==0.41.2
