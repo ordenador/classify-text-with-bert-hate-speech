@@ -424,7 +424,7 @@ websockets==11.0.3
     # via
     #   gradio
     #   gradio-client
-werkzeug==3.0.0
+werkzeug==3.0.1
     # via tensorboard
 wheel==0.41.2
     # via astunparse
