@@ -64,7 +64,6 @@ dm-tree==0.1.8
 etils[array-types,enp,epath,epy,etqdm,etree]==1.5.0
     # via
     #   array-record
-    #   etils
     #   tensorflow-datasets
 fastapi==0.103.2
     # via gradio
@@ -425,7 +424,7 @@ websockets==11.0.3
     # via
     #   gradio
     #   gradio-client
-werkzeug==3.0.1
+werkzeug==3.0.6
     # via tensorboard
 wheel==0.41.2
     # via astunparse
