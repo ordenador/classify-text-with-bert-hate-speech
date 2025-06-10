@@ -64,7 +64,6 @@ dm-tree==0.1.8
 etils[array-types,enp,epath,epy,etqdm,etree]==1.5.0
     # via
     #   array-record
-    #   etils
     #   tensorflow-datasets
 fastapi==0.103.2
     # via gradio
@@ -295,7 +294,7 @@ referencing==0.30.2
     #   jsonschema-specifications
 regex==2023.10.3
     # via sacrebleu
-requests==2.31.0
+requests==2.32.4
     # via
     #   google-api-core
     #   gradio
