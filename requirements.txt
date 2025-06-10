@@ -16,23 +16,17 @@ absl-py==1.4.0
     #   tf-slim
 aiofiles==23.2.1
     # via gradio
-altair==5.1.2
-    # via gradio
 annotated-types==0.6.0
     # via pydantic
 anyio==3.7.1
     # via
-    #   fastapi
+    #   gradio
     #   httpcore
     #   starlette
 array-record==0.4.1
     # via tensorflow-datasets
 astunparse==1.6.3
     # via tensorflow
-attrs==23.1.0
-    # via
-    #   jsonschema
-    #   referencing
 bleach==6.1.0
     # via kaggle
 cachetools==5.3.1
@@ -48,6 +42,7 @@ charset-normalizer==3.3.0
 click==8.1.7
     # via
     #   tensorflow-datasets
+    #   typer
     #   uvicorn
 colorama==0.4.6
     # via sacrebleu
@@ -64,9 +59,8 @@ dm-tree==0.1.8
 etils[array-types,enp,epath,epy,etqdm,etree]==1.5.0
     # via
     #   array-record
-    #   etils
     #   tensorflow-datasets
-fastapi==0.103.2
+fastapi==0.115.12
     # via gradio
 ffmpy==0.3.1
     # via gradio
@@ -106,9 +100,11 @@ googleapis-common-protos==1.60.0
     # via
     #   google-api-core
     #   tensorflow-metadata
-gradio==3.47.1
+gradio==5.33.0
     # via -r requirements.in
-gradio-client==0.6.0
+gradio-client==1.10.2
+    # via gradio
+groovy==0.1.2
     # via gradio
 grpcio==1.59.0
     # via
@@ -120,6 +116,8 @@ h11==0.14.0
     #   uvicorn
 h5py==3.9.0
     # via tensorflow
+hf-xet==1.1.3
+    # via huggingface-hub
 httpcore==0.18.0
     # via httpx
 httplib2==0.22.0
@@ -131,7 +129,8 @@ httpx==0.25.0
     # via
     #   gradio
     #   gradio-client
-huggingface-hub==0.17.3
+    #   safehttpx
+huggingface-hub==0.32.4
     # via
     #   gradio
     #   gradio-client
@@ -143,19 +142,11 @@ idna==3.4
 immutabledict==3.0.0
     # via tf-models-official
 importlib-resources==6.1.0
-    # via
-    #   etils
-    #   gradio
+    # via etils
 jinja2==3.1.2
-    # via
-    #   altair
-    #   gradio
+    # via gradio
 joblib==1.3.2
     # via scikit-learn
-jsonschema==4.19.1
-    # via altair
-jsonschema-specifications==2023.7.1
-    # via jsonschema
 kaggle==1.5.16
     # via tf-models-official
 keras==2.15.0
@@ -168,6 +159,8 @@ lxml==4.9.3
     # via sacrebleu
 markdown==3.5
     # via tensorboard
+markdown-it-py==3.0.0
+    # via rich
 markupsafe==2.1.3
     # via
     #   gradio
@@ -175,14 +168,14 @@ markupsafe==2.1.3
     #   werkzeug
 matplotlib==3.8.0
     # via
-    #   gradio
     #   pycocotools
     #   tf-models-official
+mdurl==0.1.2
+    # via markdown-it-py
 ml-dtypes==0.2.0
     # via tensorflow
 numpy==1.26.0
     # via
-    #   altair
     #   contourpy
     #   etils
     #   gradio
@@ -215,7 +208,6 @@ orjson==3.9.7
     # via gradio
 packaging==23.2
     # via
-    #   altair
     #   gradio
     #   gradio-client
     #   huggingface-hub
@@ -223,7 +215,6 @@ packaging==23.2
     #   tensorflow
 pandas==2.1.1
     # via
-    #   altair
     #   gradio
     #   tf-models-official
 pillow==10.0.1
@@ -269,6 +260,8 @@ pydantic-core==2.10.1
     # via pydantic
 pydub==0.25.1
     # via gradio
+pygments==2.19.1
+    # via rich
 pyparsing==3.1.1
     # via
     #   httplib2
@@ -278,7 +271,7 @@ python-dateutil==2.8.2
     #   kaggle
     #   matplotlib
     #   pandas
-python-multipart==0.0.6
+python-multipart==0.0.20
     # via gradio
 python-slugify==8.0.1
     # via kaggle
@@ -289,17 +282,11 @@ pyyaml==6.0.1
     #   gradio
     #   huggingface-hub
     #   tf-models-official
-referencing==0.30.2
-    # via
-    #   jsonschema
-    #   jsonschema-specifications
 regex==2023.10.3
     # via sacrebleu
 requests==2.31.0
     # via
     #   google-api-core
-    #   gradio
-    #   gradio-client
     #   huggingface-hub
     #   kaggle
     #   requests-oauthlib
@@ -307,16 +294,18 @@ requests==2.31.0
     #   tensorflow-datasets
 requests-oauthlib==1.3.1
     # via google-auth-oauthlib
-rpds-py==0.10.4
-    # via
-    #   jsonschema
-    #   referencing
+rich==14.0.0
+    # via typer
 rsa==4.9
     # via
     #   google-auth
     #   oauth2client
+ruff==0.11.13
+    # via gradio
 sacrebleu==2.3.1
     # via tf-models-official
+safehttpx==0.1.6
+    # via gradio
 scikit-learn==1.3.1
     # via seqeval
 scipy==1.11.3
@@ -329,6 +318,8 @@ sentencepiece==0.1.99
     # via tf-models-official
 seqeval==1.2.2
     # via tf-models-official
+shellingham==1.5.4
+    # via typer
 six==1.16.0
     # via
     #   astunparse
@@ -347,8 +338,10 @@ sniffio==1.3.0
     #   anyio
     #   httpcore
     #   httpx
-starlette==0.27.0
-    # via fastapi
+starlette==0.46.2
+    # via
+    #   fastapi
+    #   gradio
 tabulate==0.9.0
     # via sacrebleu
 tensorboard==2.15.1
@@ -391,14 +384,16 @@ threadpoolctl==3.2.0
     # via scikit-learn
 toml==0.10.2
     # via tensorflow-datasets
-toolz==0.12.0
-    # via altair
+tomlkit==0.13.3
+    # via gradio
 tqdm==4.66.1
     # via
     #   etils
     #   huggingface-hub
     #   kaggle
     #   tensorflow-datasets
+typer==0.16.0
+    # via gradio
 typing-extensions==4.8.0
     # via
     #   etils
@@ -409,6 +404,7 @@ typing-extensions==4.8.0
     #   pydantic
     #   pydantic-core
     #   tensorflow
+    #   typer
 tzdata==2023.3
     # via pandas
 uritemplate==4.1.1
@@ -422,9 +418,7 @@ uvicorn==0.23.2
 webencodings==0.5.1
     # via bleach
 websockets==11.0.3
-    # via
-    #   gradio
-    #   gradio-client
+    # via gradio-client
 werkzeug==3.0.1
     # via tensorboard
 wheel==0.41.2
