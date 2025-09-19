@@ -29,6 +29,8 @@ astunparse==1.6.3
     # via tensorflow
 bleach==6.1.0
     # via kaggle
+brotli==1.1.0
+    # via gradio
 cachetools==5.3.1
     # via google-auth
 certifi==2023.7.22
@@ -100,9 +102,9 @@ googleapis-common-protos==1.60.0
     # via
     #   google-api-core
     #   tensorflow-metadata
-gradio==5.23.0
+gradio==5.46.1
     # via -r requirements.in
-gradio-client==1.8.0
+gradio-client==1.13.1
     # via gradio
 groovy==0.1.2
     # via gradio
@@ -116,6 +118,8 @@ h11==0.14.0
     #   uvicorn
 h5py==3.9.0
     # via tensorflow
+hf-xet==1.1.10
+    # via huggingface-hub
 httpcore==0.18.0
     # via httpx
 httplib2==0.22.0
@@ -128,7 +132,7 @@ httpx==0.25.0
     #   gradio
     #   gradio-client
     #   safehttpx
-huggingface-hub==0.31.2
+huggingface-hub==0.35.0
     # via
     #   gradio
     #   gradio-client
