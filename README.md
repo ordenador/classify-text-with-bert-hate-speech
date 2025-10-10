@@ -8,6 +8,7 @@ sdk_version: 3.20.1
 app_file: app.py
 pinned: false
 license: openrail
+python_version: 3.11
 ---
 
 # Hate Speech Classifier
@@ -39,7 +40,7 @@ Make sure you have the following Python packages installed:
 You can install all them using `makefile`. The `make pip-compile` command automatically creates a `virtualenv` and installs everything in `requirements.txt`:
 
 ```bash
-make pip-compile
+make dev
 ```
 
 ## How to run the project

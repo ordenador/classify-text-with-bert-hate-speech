@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "classify-text-with-bert-hate-speech"
+version = "0.1.0"
+description = "Classify text using BERT for hate speech detection"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+license = {text = "MIT"}
+
+dependencies = [
+    "gradio",
+    "tensorflow-text",
+    "tf-models-official",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py37"
+select = ["E", "F", "I", "B", "W", "C90", "N", "UP", "ANN", "FBT", "PL", "PERF", "RUF"]
+ignore = []
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+docstring-code-format = true
