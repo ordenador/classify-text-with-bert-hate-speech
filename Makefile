@@ -1,4 +1,4 @@
-.PHONY: help install dev clean test format lint status run notebook docker-build docker-run
+.PHONY: help install dev clean test format lint status run notebook docker-build docker-run requirements update
 
 IMAGE_NAME := classify-text-with-bert-hate-speech
 IMAGE_TAG := local
@@ -13,6 +13,8 @@ help:
 	@echo ""
 	@echo "  make install     - Install production dependencies with uv"
 	@echo "  make dev         - Install development dependencies with uv"
+	@echo "  make requirements- Generate requirements.txt from uv.lock"
+	@echo "  make update      - Update all dependencies to latest versions"
 	@echo "  make run         - Run the application (app.py)"
 	@echo "  make notebook    - Launch jupyter notebook/lab"
 	@echo "  make test        - Run tests (requires pytest)"
@@ -33,6 +35,17 @@ dev:
 	@echo "📦 Installing development dependencies with uv..."
 	uv sync --dev
 	@echo "✅ Development dependencies installed successfully!"
+
+requirements: update
+	@echo "📝 Generating requirements.txt from uv.lock..."
+	uv pip compile pyproject.toml -o requirements.txt
+	@echo "✅ requirements.txt generated successfully!"
+
+update: dev
+	@echo "🔄 Updating all dependencies to latest versions..."
+	uv lock --upgrade
+	@echo "✅ Dependencies updated! Run 'make install' or 'make dev' to apply changes."
+	@echo "💡 Tip: Run 'make requirements' to regenerate requirements.txt"
 
 run:
 	@echo "Running app.py..."
