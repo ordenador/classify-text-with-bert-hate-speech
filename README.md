@@ -4,7 +4,7 @@ emoji: 🔥
 colorFrom: purple
 colorTo: red
 sdk: gradio
-sdk_version: 3.20.1
+sdk_version: 5.49.1
 app_file: app.py
 pinned: false
 license: openrail
@@ -31,13 +31,14 @@ Click the link above to access the interactive interface where you can input tex
 ## Prerequisites
 Make sure you have the following Python packages installed:
 
-- gradio
-- tensorflow
-- tensorflow_hub
-- tensorflow_text
+- Python 3.11
+- gradio >= 5.0.0
+- tensorflow >= 2.19.0
+- tensorflow-text >= 2.19.0
+- tf-models-official >= 2.19.0
 
 
-You can install all them using `makefile`. The `make pip-compile` command automatically creates a `virtualenv` and installs everything in `requirements.txt`:
+You can install all them using `makefile`. The `make dev` command automatically creates a `virtualenv` and installs everything in `requirements.txt`:
 
 ```bash
 make dev
