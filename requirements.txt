@@ -112,7 +112,7 @@ googleapis-common-protos==1.70.0
     # via
     #   google-api-core
     #   tensorflow-metadata
-gradio==3.20.1
+gradio==5.31.0
     # via classify-text-with-bert-hate-speech (pyproject.toml)
 grpcio==1.75.1
     # via
