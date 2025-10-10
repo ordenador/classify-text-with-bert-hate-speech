@@ -201,7 +201,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "gradio" },
+    { name = "gradio", specifier = ">=5.0.0" },
     { name = "tensorflow-text" },
     { name = "tf-models-official" },
 ]
