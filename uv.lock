@@ -189,7 +189,10 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "gradio" },
+    { name = "tensorflow" },
+    { name = "tensorflow-hub" },
     { name = "tensorflow-text" },
+    { name = "tf-keras" },
     { name = "tf-models-official" },
 ]
 
@@ -202,8 +205,11 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "gradio", specifier = ">=5.0.0" },
-    { name = "tensorflow-text" },
-    { name = "tf-models-official" },
+    { name = "tensorflow", specifier = ">=2.18.0,<2.20.0" },
+    { name = "tensorflow-hub", specifier = ">=0.16.0" },
+    { name = "tensorflow-text", specifier = ">=2.18.0,<2.20.0" },
+    { name = "tf-keras", specifier = ">=2.18.0" },
+    { name = "tf-models-official", specifier = ">=2.18.0" },
 ]
 
 [package.metadata.requires-dev]
