@@ -1,10 +1,22 @@
+# Suppress TensorFlow warnings about plugin registration
+import os
 from typing import Dict
 
 import gradio as gr
 import numpy as np
 import tensorflow as tf
-import tensorflow_hub as hub
+
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"  # Suppress TF warnings
+
 import tensorflow_text  # noqa: F401 - Required to register TensorFlow Text ops
+
+# Import tensorflow_hub with error handling
+try:
+    import tensorflow_hub as hub
+except ImportError as e:
+    # Fallback if tensorflow_hub has issues
+    print(f"Warning: TensorFlow Hub import issue: {e}")
+    hub = None
 
 # Use tf_keras for compatibility with models saved using tf.keras
 try:
@@ -15,7 +27,13 @@ try:
 except ImportError:
     keras = tf.keras
 
-from official.nlp.optimization import AdamWeightDecay, WarmUp
+# Import optimization with error handling
+try:
+    from official.nlp.optimization import AdamWeightDecay, WarmUp
+except ImportError:
+    # Fallback if official.nlp is not available
+    AdamWeightDecay = None
+    WarmUp = None
 
 np.set_printoptions(suppress=True)
 
@@ -23,7 +41,14 @@ labels = ["hate speech", "offensive language", "neither"]
 
 
 # Load model with custom objects
-custom_objects = {"KerasLayer": hub.KerasLayer, "AdamWeightDecay": AdamWeightDecay, "WarmUp": WarmUp}
+custom_objects = {}
+if hub is not None:
+    custom_objects["KerasLayer"] = hub.KerasLayer
+if AdamWeightDecay is not None:
+    custom_objects["AdamWeightDecay"] = AdamWeightDecay
+if WarmUp is not None:
+    custom_objects["WarmUp"] = WarmUp
+
 classifier_model = keras.models.load_model("classifier_model.h5", custom_objects=custom_objects)
 
 

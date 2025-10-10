@@ -12,8 +12,11 @@ license = {text = "MIT"}
 
 dependencies = [
     "gradio>=5.0.0",
-    "tensorflow-text",
-    "tf-models-official",
+    "tensorflow>=2.18.0,<2.20.0",
+    "tensorflow-text>=2.18.0,<2.20.0",
+    "tensorflow-hub>=0.16.0",
+    "tf-models-official>=2.18.0",
+    "tf-keras>=2.18.0",
 ]
 
 [dependency-groups]

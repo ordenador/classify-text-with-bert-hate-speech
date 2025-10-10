@@ -373,13 +373,16 @@ tensorboard-data-server==0.7.2
     # via tensorboard
 tensorflow==2.19.1
     # via
+    #   classify-text-with-bert-hate-speech (pyproject.toml)
     #   tensorflow-text
     #   tf-keras
     #   tf-models-official
 tensorflow-datasets==4.9.9
     # via tf-models-official
-tensorflow-hub==0.15.0
-    # via tf-models-official
+tensorflow-hub==0.16.1
+    # via
+    #   classify-text-with-bert-hate-speech (pyproject.toml)
+    #   tf-models-official
 tensorflow-io-gcs-filesystem==0.37.1
     # via tensorflow
 tensorflow-metadata==1.17.2
@@ -399,7 +402,10 @@ text-unidecode==1.3
     #   kaggle
     #   python-slugify
 tf-keras==2.19.0
-    # via tf-models-official
+    # via
+    #   classify-text-with-bert-hate-speech (pyproject.toml)
+    #   tensorflow-hub
+    #   tf-models-official
 tf-models-official==2.19.1
     # via classify-text-with-bert-hate-speech (pyproject.toml)
 tf-slim==1.1.0
