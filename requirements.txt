@@ -158,7 +158,7 @@ joblib==1.5.2
     # via scikit-learn
 kaggle==1.7.4.5
     # via tf-models-official
-keras==3.11.3
+keras==3.12.0
     # via tensorflow
 kiwisolver==1.4.9
     # via matplotlib
